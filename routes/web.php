@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('adminViews.agenda');
-});
+
+Route::get('/agenda','adminController\HomeController@home')->name('agendaHome');
 
 Route::get('/cadastro','adminController\ContatoController@cadastrar')->name('addContato');
 Route::post('/cadastro','adminController\ContatoController@cadastrarAcao');
@@ -24,6 +23,10 @@ Route::get('/edita/{id}','adminController\ContatoController@editar')->name('edit
 Route::post('/edita/{id}','admincontroller\contatoController@editarAcao');
 
 Route::get('/deleta/{id}','adminController\ContatoController@deletar')->name('delContato');
+
+Route::get('/lista','adminController\BuscaController@pesquisar')->name('listContatos');
+
+
 
 
 

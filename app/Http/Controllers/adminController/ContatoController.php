@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\adminController;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 //importando a classe controller
 use App\Http\Controllers\Controller;
 //importanto o model a ser usado nesse controller
@@ -16,7 +17,7 @@ class ContatoController extends Controller
         $request->validate([
             //a validacao abaixo poderia ser separada por uma barra, porem é apenas uma outra forma de fazer. No meu caso, preferir usar um array
             'nome'=>['required','string','min:4','max:30','unique:contatos'],
-            'telefone'=>['required','string','min:11','max:11','unique:contatos']
+            'telefone'=>['required','string','min:11','unique:contatos']
         ]);
         $nome = $request->input('nome');
         $telefone = $request->input('telefone');
@@ -35,11 +36,11 @@ class ContatoController extends Controller
                 $contato->save();
                 return redirect()->route('listContatos')
                 //a msg abaixo só exibida o processo der certo, e é conhecida como (flash mensage), esta será exibida na pagina que lista os dados, sendo acessada artravés da funcao session
-                ->with('mensagemCadastro', 'Contato cadastrado com sucesso!');
+                ->with('mensagemCadastro', 'Contato salvo com sucesso!');
         }
     }
     public function listar(){
-        $listar = Contato::all();
+        $listar = Contato::all()->sortBy('nome');
         return view('adminViews.lista',['listar'=>$listar]);
     }
     public function editar($id){
@@ -51,9 +52,10 @@ class ContatoController extends Controller
             return redirect()->route('listContatos');
         }
     }
-    public function editarAcao(Request $request, $id){
+    public function editarAcao(Request $request, Contato $id){
+       //$id -> $this;
         $request->validate([
-            'nome'=>['required','string','min:4','max:30','unique:contatos'],
+            'nome'=>['required','string','min:4','max:30','unique:contatos',Rule::unique('id')->ignore($this->$id)],
             'telefone'=>['required','string','min:11','max:11','unique:contatos']
         ]);
         $nome = $request->input('nome');

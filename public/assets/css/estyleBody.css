@@ -1,0 +1,35 @@
+.contentBody{
+    background-color:none;
+    margin-top: 12%;
+}
+.contatos{
+    border:1px solid thistle;
+    border-radius: 25px;
+    background-color:#e63888;
+}
+.glyphicon{
+    color:lightskyblue;
+    font-size:50px;
+    margin-top: 2%;
+}
+h2{
+    color:lightskyblue;
+}
+th{
+    font-size: 17px;
+    color: steelblue;
+}
+th .glyphicon{
+    font-size: 15px;
+    color: steelblue;
+}
+tr{
+    font-size: 17px;
+}
+li{
+    font-size: 17px;
+}
+.table-overflow {
+    max-height:400px;
+    overflow-x:auto;
+}

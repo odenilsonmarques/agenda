@@ -1,0 +1,29 @@
+.navbar {
+    margin-bottom: 0;
+    background-color: #e63888;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+.navbar-default .navbar-brand{
+    font-size: 27px;
+    color:#fff;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-default .navbar-nav > li > a:hover{
+    color: #f4511e;
+    background-color: #FFF;
+    border-radius: 5px;
+}
+a{
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+
