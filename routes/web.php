@@ -20,7 +20,7 @@ Route::post('/cadastro','adminController\ContatoController@cadastrarAcao');
 Route::get('/lista','adminController\ContatoController@listar')->name('listContatos');
 
 Route::get('/edita/{id}','adminController\ContatoController@editar')->name('editContato');
-Route::post('/edita/{id}','admincontroller\contatoController@editarAcao');
+Route::post('/edita/{id}','adminController\contatoController@editarAcao');
 
 Route::get('/deleta/{id}','adminController\ContatoController@deletar')->name('delContato');
 

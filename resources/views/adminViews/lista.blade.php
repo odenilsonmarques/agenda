@@ -35,8 +35,8 @@
                                 <td>{{$item->telefone}}</td>
                                 <td>{{$item->email}}</td>
                                 <td>
-                                    <a href="{{route('editContato',['id'=>$item->id])}}" class="btn-primary btn-sm">Editar</a>
-                                    <a href="{{route('delContato',['id'=>$item->id])}}" onclick="return confirm('DESEJA CONFIRMAR A EXCLUSÃO ?')" class="btn-danger btn-sm">Excluir</a>
+                                    <a href="{{route('editContato',[$item->id])}}" class="btn-primary btn-sm">Editar</a>
+                                    <a href="{{route('delContato',[$item->id])}}" onclick="return confirm('DESEJA CONFIRMAR A EXCLUSÃO ?')" class="btn-danger btn-sm">Excluir</a>
                                 </td>
                             </tr>
                         @endforeach
