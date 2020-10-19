@@ -33,3 +33,8 @@ li{
     max-height:400px;
     overflow-x:auto;
 }
+.novoContato a{
+    color:#FFF;
+    font-size: 15px;
+    text-decoration: none;
+}

@@ -47,6 +47,7 @@
                         <div class="panel-footer">
                             <div class="row">
                                 <div class="col-lg-12">
+                                    <a href="{{route('agendaHome')}}" class="btn btn-danger  ">CANCELAR</a>
                                     <button type="submit" class="btn btn-success">CADASTRAR</button>
                                 </div>
                             </div>

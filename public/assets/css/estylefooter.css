@@ -9,3 +9,6 @@ p {
     font-weight: bolder;
     font-family: Cambria;
 }
+.panel-footer button{
+    margin-top: 14px;
+}
