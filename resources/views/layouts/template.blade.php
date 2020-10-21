@@ -7,9 +7,9 @@
     <title>@yield('title')</title>
 
     <link rel="stylesheet" href="{{('assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/estyleHeader.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/estyleBody.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/estyleFooter.css')}}">
+    <link rel="stylesheet" href="{{('assets/css/styleHeader.css')}}">
+    <link rel="stylesheet" href="{{('assets/css/styleBody.css')}}">
+    <link rel="stylesheet" href="{{('assets/css/styleFooter.css')}}">
 </head>
 <body>
     <header>

@@ -1,5 +1,4 @@
 @extends('layouts.template')
-
 @section('title','edicao')
     
 @section('content')
@@ -16,10 +15,7 @@
 
         <label for="telofone">Celular</label><br/>
         <input type="text" name="telefone" value="{{$data->telefone}}"><br/><br/>
-
-        <label for="email">E-mail</label><br/>
-        <input type="email" name="email" value="{{$data->email}}"><br/><br/>
-
+        
         <input type="submit" value="Salvar Alteração"/>
     </form>
 @endsection
