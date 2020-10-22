@@ -10,6 +10,12 @@
                     <p>{{session('mensagemCadastro')}}</p>
                 </div>
             @endif
+            @if(session('mensagemEdicao'))
+                <div class="alert alert-success alert-dismissible fade in text-center">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <p>{{session('mensagemEdicao')}}</p>
+                </div>
+            @endif
             <div class="row">
                 <div class="col-lg-8">
                     <form method="GET" action="{{route('listContatos')}}" class="form-inline">

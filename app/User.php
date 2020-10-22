@@ -10,6 +10,9 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+     //informando para o eloquent para ignorar o campo abaixo, pq na tabela não vai ter o created_at e update_at
+     public $timestamps = false;
+
     /**
      * The attributes that are mass assignable.
      *

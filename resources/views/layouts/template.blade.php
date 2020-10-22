@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
 
-    <link rel="stylesheet" href="{{('assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/styleHeader.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/styleBody.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/styleFooter.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/styleHeader.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/styleBody.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/styleFooter.css')}}">
 </head>
 <body>
     <header>
