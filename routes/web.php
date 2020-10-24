@@ -22,15 +22,12 @@ Route::get('/lista','adminController\ContatoController@listar')->name('listConta
 Route::get('/edita/{id}','adminController\ContatoController@editar')->name('editContato')->middleware('auth');
 Route::post('/edita/{id}','adminController\contatoController@editarAcao');
 
-Route::get('/deleta/{id}','adminController\ContatoController@deletar')->name('delContato');
+Route::get('/deleta/{id}','adminController\ContatoController@deletar')->name('delContato')->middleware('auth');
 
 Route::get('/lista','adminController\BuscaController@pesquisar')->name('listContatos')->middleware('auth');
 
+Auth::routes(['register'=>false]);
 
-
-
-// a rota abaixo foi criada quando foi feita a instalação dos pacotes de autenticacao do laravel
-
-Auth::routes();
-
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', function(){
+    return view('adminViews.welcome');
+});
