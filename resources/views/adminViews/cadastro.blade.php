@@ -1,7 +1,5 @@
 @extends('layouts.template')
-
 @section('title','cadastro')
-
 @section('content')
     <div class="row">
         <div class="col-lg-12">
@@ -46,9 +44,9 @@
                         </div>
                         <div class="panel-footer">
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <a href="{{route('agendaHome')}}" class="btn btn-danger  ">CANCELAR</a>
-                                    <button type="submit" class="btn btn-success">CADASTRAR</button>
+                                <div class="col-lg-12 glyphiconIcon">
+                                    <a href="{{route('agendaHome')}}" class="btn btn-danger"><strong>CANCELAR</strong> <span class="glyphicon glyphicon-remove"></span></a>
+                                    <button type="submit" class="btn btn-success"><strong>CADASTRAR</strong> <span class="glyphicon glyphicon-ok"></span></button>
                                 </div>
                             </div>
                         </div>

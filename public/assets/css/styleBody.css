@@ -1,6 +1,6 @@
 .contentBody{
-    background-color:none;
-    margin-top: 12%;
+    background-color:none; 
+    margin-top: 150px;
 }
 .contatos{
     border:1px solid thistle;
@@ -17,11 +17,11 @@ h2{
 }
 th{
     font-size: 17px;
-    color: steelblue;
+    color:#1E90FF;
 }
 th .glyphicon{
     font-size: 15px;
-    color: steelblue;
+    color:#1E90FF;
 }
 tr{
     font-size: 17px;
@@ -40,4 +40,27 @@ li{
 }
 .contatos a{
     text-decoration: none;
+}
+
+p{
+    color:dodgerblue;
+    font-size:22px;
+    font-weight: bolder;
+}
+#msg{
+    color:#228B22;
+    font-size:20px;
+    font-weight: bolder;
+}
+.imgAgenda img{
+    width:30%;
+}
+
+.novoContato .glyphicon{
+    font-size: 18px;
+    color: #FFF;
+}
+
+#teste{
+    color:indianred
 }

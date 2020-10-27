@@ -1,30 +1,30 @@
 @extends('layouts.template')
 @section('title','contatos')
-
 @section('content')
     <div class="row">
         <div class="col-lg-12">
             @if(session('mensagemCadastro'))
                 <div class="alert alert-success alert-dismissible fade in text-center">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <p>{{session('mensagemCadastro')}}</p>
+                    <p id="msg">{{session('mensagemCadastro')}}</p>
                 </div>
             @endif
             @if(session('mensagemEdicao'))
                 <div class="alert alert-success alert-dismissible fade in text-center">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <p>{{session('mensagemEdicao')}}</p>
+                    <p id="msg">{{session('mensagemEdicao')}}</p>
                 </div>
             @endif
             <div class="row">
                 <div class="col-lg-8">
                     <form method="GET" action="{{route('listContatos')}}" class="form-inline">
+                        @csrf
                         <input type="text" name="search" class="form-control" placeholder="Informe o nome" autofocus style="min-width:327px;"/>
                         <button type="submit" class="btn btn-primary"> BUSCAR</button>
                     </form>
                 </div>
                 <div class="col-lg-4 text-right novoContato">
-                    <button  class="btn btn-success"><a href="{{route('addContato')}}">NOVO CONTATO</a></button>
+                    <button  class="btn btn-success"><a href="{{route('addContato')}}">NOVO CONTATO <span class="glyphicon glyphicon-user"></span></a></button>
                 </div>
             </div><br/>
             <div class="table-responsive">  
