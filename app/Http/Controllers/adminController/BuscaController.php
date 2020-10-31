@@ -7,9 +7,11 @@ use App\Contato;
 
 class BuscaController extends Controller
 {
+    // usando o request porque irei trabalhar com dados vindo do formulario
     public function pesquisar(){
         $search = filter_input(INPUT_GET,'search');
-        $listar = Contato::select()->where('nome','like',''.$search.'%')->get();
-        return view('adminViews.lista',['listar'=>$listar]);
+        $contatos = Contato::orderBy('nome')->where('nome','like',''.$search.'%')->paginate(10);
+       // $contatos = Contato::select()->where('nome','like',''.$search.'%')->paginate(10);
+        return view('adminViews.lista',['contatos'=>$contatos]);
     }
 }

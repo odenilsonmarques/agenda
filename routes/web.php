@@ -24,7 +24,7 @@ Route::post('/edita/{id}','adminController\contatoController@editarAcao');
 
 Route::get('/deleta/{id}','adminController\ContatoController@deletar')->name('delContato')->middleware('auth');
 
-Route::get('/lista','adminController\BuscaController@pesquisar')->name('listContatos')->middleware('auth');
+Route::any('/lista','adminController\BuscaController@pesquisar')->name('buscaPesquisa')->middleware('auth');
 
 Auth::routes(['register'=>false]);
 

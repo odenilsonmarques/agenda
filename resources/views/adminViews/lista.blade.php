@@ -17,7 +17,8 @@
             @endif
             <div class="row">
                 <div class="col-lg-8">
-                    <form method="GET" action="{{route('listContatos')}}" class="form-inline">
+                    <form method="GET" action="{{route('buscaPesquisa')}}" class="form-inline">
+                        <!--sempre usar a diretiva csrf em formualarios-->
                         @csrf
                         <input type="text" name="search" class="form-control" placeholder="Informe o nome" autofocus style="min-width:327px;"/>
                         <button type="submit" class="btn btn-primary"> BUSCAR</button>
@@ -37,7 +38,7 @@
                             <th>AÇÃO</th>
                         </tr>
                     </thead>
-                    @foreach ($listar as $item)
+                    @foreach ($contatos as $item)
                         <tr>
                             <td>{{$item->nome}}</td>
                             <td>{{$item->telefone}}</td>
@@ -49,8 +50,10 @@
                         </tr>
                     @endforeach
                 </table>
+                {{$contatos->links()}}
             </div>
         </div>
+        
     </div>
 @endsection
 

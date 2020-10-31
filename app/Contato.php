@@ -10,4 +10,5 @@ class Contato extends Model
      public $timestamps = false;
 
      protected $fillable = ['nome','telefone','email','id'];
+
 }

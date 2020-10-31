@@ -29,10 +29,7 @@ tr{
 li{
     font-size: 17px;
 }
-.table-overflow {
-    max-height:400px;
-    overflow-x:auto;
-}
+
 .novoContato a{
     color:#FFF;
     font-size: 15px;
@@ -61,6 +58,3 @@ p{
     color: #FFF;
 }
 
-#teste{
-    color:indianred
-}
